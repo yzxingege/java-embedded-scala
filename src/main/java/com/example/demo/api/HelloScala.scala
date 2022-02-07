@@ -1,12 +1,12 @@
 package com.example.demo.api
+
+/**
+ * scala的hello word
+ */
 object HelloScala {
 
-  /**
-   * hello world from scala
-   * @param args
-   */
   def main(args: Array[String]): Unit = {
-    println("hello world from scala")
+    println("hello world from scala !")
   }
 
 }
