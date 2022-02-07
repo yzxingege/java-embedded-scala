@@ -1,6 +1,0 @@
-com/example/demo/common/AjaxResult.class
-com/example/demo/repository/UserRepository.class
-com/example/demo/config/ConnectionFactoryConfiguration.class
-com/example/demo/WebfluxR2dbcApplication.class
-com/example/demo/api/WebfluxAndR2dbcApi.class
-com/example/demo/entity/User.class
