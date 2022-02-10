@@ -107,8 +107,8 @@
                 <version>4.5.6</version>
                 <executions>
                     <execution>
-                        <id>scala-compile-first</id>
-                        <phase>process-resources</phase>
+                        <id>compile-scala</id>
+                        <phase>compile</phase>
                         <goals>
                             <goal>add-source</goal>
                             <goal>compile</goal>
@@ -122,6 +122,17 @@
                         </goals>
                     </execution>
                 </executions>
+                <configuration>
+                    <recompileMode>incremental</recompileMode>
+                    <scalaVersion>2.11.7</scalaVersion>
+                    <args>
+                        <arg>-deprecation</arg>
+                    </args>
+                    <jvmArgs>
+                        <jvmArg>-Xms512m</jvmArg>
+                        <jvmArg>-Xmx2048m</jvmArg>
+                    </jvmArgs>
+                </configuration>
             </plugin>
         </plugins>
     </build>
