@@ -8,6 +8,7 @@ class WebfluxR2dbcApplicationTests {
 
     @Test
     void contextLoads() {
+        System.err.println(11);
     }
 
 }
