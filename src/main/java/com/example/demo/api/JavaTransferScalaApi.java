@@ -1,5 +1,4 @@
 package com.example.demo.api;
-
 import com.alibaba.fastjson.JSON;
 import com.example.TestJava;
 import com.example.demo.common.AjaxResult;
@@ -9,12 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
-import scala.Tuple2;
-import scala.collection.Seq;
-
-import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 /**
  * @Author hanxiang
@@ -30,6 +24,7 @@ public class JavaTransferScalaApi {
         TestJava testJava = new TestJava();
         //传入之前，先转成scala的map
         scala.collection.immutable.Map<String, Object> req = JavaConvertScala.toScalaImmutableMap(request);
+        //调用scala处理业务逻辑
         Map map = JSON.parseObject(JSON.toJSONString(testJava.returnMap(req)));
         AjaxResult<Object> ajaxResult = new AjaxResult(map);
         return Mono.just(ajaxResult);
