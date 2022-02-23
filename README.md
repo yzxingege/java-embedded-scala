@@ -16,3 +16,10 @@
    最后，那可能会问，kafka、spark、flink版本不统一怎么办？这着实是一个比较难办的问题，
    因为在软件开发过程中由于版本不统一造成的问题千奇百怪，可能会消耗掉大量的时间去解决版本冲突的问题，
    所以最好建议在做开发之前一定要做好版本调研，避免在开发中处理这些没有必要的问题
+
+# Protocol Buffers 
+  下版本将会更新数据传输协议Protocol Buffers(protobuf) 官网：https://developers.google.cn/protocol-buffers
+  首先需先安装好protobuf编译器(官网中的指引下载源码，但并没有找到编译器的安装方式，可自行baidu搜索)/
+  <br/> 为提高可读性可安装idea插件: Protocol Buffer Editor
+  <br/> 使用场景：
+  并发时的脱库方案
