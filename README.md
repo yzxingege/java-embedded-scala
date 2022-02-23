@@ -19,7 +19,14 @@
 
 # Protocol Buffers 
   下版本将会更新数据传输协议Protocol Buffers(protobuf) 官网：https://developers.google.cn/protocol-buffers
-  首先需先安装好protobuf编译器(官网中的指引下载源码，但并没有找到编译器的安装方式，可自行baidu搜索)/
   <br/> 为提高可读性可安装idea插件: Protocol Buffer Editor
   <br/> 使用场景：
   并发时的脱库方案
+  首先需先安装好protobuf编译器:
+    依次执行一下命令,如报错无法执行请先安装brew(本人是mac os,其他操作系统如不适用自行百度)
+        brew install automake
+        brew install libtool
+        brew install protobuf
+    安装后执行命令 protoc --version 验证是否安装成功
+    
+  

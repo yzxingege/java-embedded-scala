@@ -1,0 +1,37 @@
+syntax = "proto3";
+//不使用packge时，将根据执行命令的路径寻找package指定的包去生成Java类，如果没有则创建
+//package pb_bean;
+
+/*
+ *  README.md中声明了如何安装proto编译器;
+ *  使用protoc编译器将.proto文件编译成Java文件，前置条件需先cd到要编译的.proto文件目录下,后执行命令：protoc --java_out=../ ./Demo.proto
+ *  (其中有两个参数，参数1表示要生成到哪里去，参数2标识要执行的是哪个.proto文件)
+ *  注意： 以上例子的参数执行了../ 表示在当前目录向上找一级，后根据要执行的Demo.proto文件中配置的package或java_package的目录去生成Java类
+ */
+//实际应该使用com.example.demo.pb_bean全路径, 同时只能指定java_package或package， 但是目前这样会出错，等解决后在更新
+//option java_package = "com.example.demo.protobean";
+option java_package = "protobean";
+option java_outer_classname = "DemoProtos";
+//对于生成后的Java文件报错目前定位不到问题，后续在解决
+message Person {
+  string name = 1;
+  int32 id = 2;
+  string email = 3;
+
+  enum PhoneType {
+    MOBILE = 0;
+    HOME = 1;
+    WORK = 2;
+  }
+
+  message PhoneNumber {
+    string number = 1;
+    PhoneType type = 2;
+  }
+
+  repeated PhoneNumber phones = 4;
+}
+
+message AddressBook {
+  repeated Person people = 1;
+}
