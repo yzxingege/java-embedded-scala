@@ -23,10 +23,8 @@
   <br/> 使用场景：
   并发时的脱库方案
   首先需先安装好protobuf编译器:
-    依次执行一下命令,如报错无法执行请先安装brew(本人是mac os,其他操作系统如不适用自行百度)
-        brew install automake
-        brew install libtool
-        brew install protobuf
-    安装后执行命令 protoc --version 验证是否安装成功
+    在工程的顶级file目录里已上传请自取， 解压打开项目后执行 ./configure 
+    安装完成后执行 make 再执行 make install
+    最后执行命令 protoc --version 验证是否安装成功
     
   
