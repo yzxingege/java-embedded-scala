@@ -10,19 +10,11 @@ package pbBean;
  *  注：.build.sh脚本声明了生成的脚本可以直接到当前目录下执行 ./build.sh 命令
  */
 
-//option java_package = "com.example.demo.protobean";
-option java_outer_classname = "DemoProtos";
+option java_outer_classname = "TestProto";
 //build.sh的命令执行时会和.proto文件内的配置共通执行
-message Person {
-  string name = 1;
-  int32 id = 2;
-  string email = 3;
-
-  message PhoneNumber {
-    string number = 1;
-  }
-}
-
-message AddressBook {
-  repeated Person people = 1;
+message TestData {
+  int32 id = 1;
+  string name = 2;
+  int32 userAge = 3;
+  int32 isDel = 4;
 }
