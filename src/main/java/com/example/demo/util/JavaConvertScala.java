@@ -2,7 +2,6 @@ package com.example.demo.util;
 
 import scala.Tuple2;
 import scala.collection.Seq;
-
 import java.util.List;
 import java.util.stream.Collectors;
 
