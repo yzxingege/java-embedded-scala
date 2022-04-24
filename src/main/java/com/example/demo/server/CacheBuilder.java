@@ -52,7 +52,7 @@ public class CacheBuilder extends PbBuiler{
     }
 
     /**
-     * 构建测试数据
+     * 构建测试数据，实际并没有存入磁盘。此处没有深入研究。有时间会用到，在去研究
      */
     public void buildTestData() {
         Flux<User> users = userRepository.findAll();
